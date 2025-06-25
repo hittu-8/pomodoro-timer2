@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポモドーロタイマー</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    <div class="container">
+        <div class="timer-container">
+            <div class="timer-setup">
+                <div class="setup-item">
+                    <label for="workTime">作業時間:</label>
+                    <input type="number" id="workTime" min="5" max="60" value="25">
+                    <span>分</span>
+                </div>
+                <div class="setup-item">
+                    <label for="breakTime">休憩時間:</label>
+                    <input type="number" id="breakTime" min="1" max="15" value="5">
+                    <span>分</span>
+                </div>
+            </div>
+            <h1>ポモドーロタイマー</h1>
+            <div class="set-display">
+                <span id="setDisplay">セット 1/4</span>
+            </div>
+            <div class="timer-display">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="status" id="status">作業モード</div>
+            <div class="controls">
+                <button id="startBtn">開始</button>
+                <button id="stopBtn">停止</button>
+                <button id="resetBtn">リセット</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

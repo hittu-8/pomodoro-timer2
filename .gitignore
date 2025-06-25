@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+.env
+
+# Build outputs
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+
+# Local Netlify folder
+.netlify
