@@ -41,10 +41,8 @@ function updateSetDisplay() {
 
 function updateDisplay() {
     const minutesElement = document.getElementById('minutes');
-    const colonElement = document.getElementById('colon');
     const secondsElement = document.getElementById('seconds');
     minutesElement.textContent = currentMinutes.toString().padStart(2, '0');
-    colonElement.textContent = ':';
     secondsElement.textContent = currentSeconds.toString().padStart(2, '0');
 }
 
@@ -55,6 +53,7 @@ function updateStatus() {
 }
 
 function startTimer() {
+    console.log('タイマー開始');
     if (isRunning) return;
     
     isRunning = true;
