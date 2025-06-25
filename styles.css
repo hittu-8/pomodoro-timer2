@@ -56,11 +56,98 @@ h1 {
 
 .timer-display {
     font-size: 6em;
-    font-weight: 700;
     margin: 1rem 0;
-    color: var(--primary-color); /* 濃いネイビー */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0.5em;
+    line-height: 1;
+    white-space: nowrap;
+    color: var(--primary-color);
+}
+
+.timer-display span {
+    color: inherit;
+}
+
+body.dark-theme .timer-display,
+body.dark-theme .timer-display span {
+    color: #fff;
+}
+
+/* タイマーディスプレイの数字とコロンを個別にスタイリング */
+.timer-number {
     font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    min-width: 2em;
+    text-align: center;
+}
+
+.timer-number.status {
+    font-size: 1.5em;
+    margin: 1rem 0;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .timer-number.status {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.colon {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #4A4A4A;
+    min-width: 0.5em;
+    text-align: center;
+    margin: 0;
+}
+
+/* 反転時のスタイル */
+body.dark-theme {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+}
+
+body.dark-theme .timer-display {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .timer-display .timer-number {
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .timer-display .colon {
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 作業中要素の反転時のスタイル */
+body.dark-theme .status {
+    color: #fff;
+}
+
+/* タイマーディスプレイの数字とコロンを個別にスタイリング */
+.timer-display span {
+    display: inline-block;
+    min-width: 2em;
+    text-align: center;
+    font-weight: 700;
+}
+
+.timer-display span:nth-child(2) {
+    color: #4A4A4A; /* コロンの色を暗めのグレーに */
+    font-weight: 400;
 }
 
 .controls {

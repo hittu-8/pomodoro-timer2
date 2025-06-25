@@ -40,8 +40,12 @@ function updateSetDisplay() {
 }
 
 function updateDisplay() {
-    document.getElementById('minutes').textContent = currentMinutes.toString().padStart(2, '0');
-    document.getElementById('seconds').textContent = currentSeconds.toString().padStart(2, '0');
+    const minutesElement = document.getElementById('minutes');
+    const colonElement = document.getElementById('colon');
+    const secondsElement = document.getElementById('seconds');
+    minutesElement.textContent = currentMinutes.toString().padStart(2, '0');
+    colonElement.textContent = ':';
+    secondsElement.textContent = currentSeconds.toString().padStart(2, '0');
 }
 
 function updateStatus() {
